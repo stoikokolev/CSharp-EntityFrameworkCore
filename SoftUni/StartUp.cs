@@ -17,7 +17,7 @@ namespace SoftUni
 
             var context = new SoftUniContext();
 
-            var result = RemoveTown(context);
+            var result = GetEmployeesByFirstNameStartingWithSa(context);
 
             Console.WriteLine(result);
         }
@@ -277,7 +277,30 @@ namespace SoftUni
             return _sb.ToString().TrimEnd();
         }
 
-        //TODO Poblem 14
+        //Poblem 14 for Judge
+        public static string GetEmployeesByFirstNameStartingWithSa(SoftUniContext context)
+        {
+            var employees = context
+                .Employees
+                .Where(e => e.FirstName.StartsWith("Sa"))
+                .Select(e => new
+                {
+                    e.FirstName,
+                    e.LastName,
+                    e.JobTitle,
+                    e.Salary
+                })
+                .OrderBy(e=>e.FirstName)
+                .ThenBy(e=>e.LastName)
+                .ToList();
+
+            foreach (var e in employees)
+            {
+                _sb.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary:f2})");
+            }
+
+            return _sb.ToString().TrimEnd();
+        }
 
         //TODO Poblem 15
 
