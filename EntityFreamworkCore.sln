@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUni", "SoftUni\SoftUni.csproj", "{F552EBFA-B02B-433A-A0F7-FE6BE716D327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUni", "SoftUni\SoftUni.csproj", "{F552EBFA-B02B-433A-A0F7-FE6BE716D327}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database First", "Database First", "{EF2FB0A3-853E-4E5F-A66E-779586F97771}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Relations", "Relations", "{F85119C6-195B-4F62-A0B5-8C22DBE6B6BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "My Cool Car System", "My Cool Car System", "{BD5B951C-1DA9-421B-A21F-18576B78CD6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCoolCarSystem", "EntityRelations\MyCoolCarSystem\MyCoolCarSystem.csproj", "{59BCCF1C-8E90-46CF-BCCB-2F87A20D6449}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,18 @@ Global
 		{F552EBFA-B02B-433A-A0F7-FE6BE716D327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F552EBFA-B02B-433A-A0F7-FE6BE716D327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F552EBFA-B02B-433A-A0F7-FE6BE716D327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BCCF1C-8E90-46CF-BCCB-2F87A20D6449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BCCF1C-8E90-46CF-BCCB-2F87A20D6449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BCCF1C-8E90-46CF-BCCB-2F87A20D6449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BCCF1C-8E90-46CF-BCCB-2F87A20D6449}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F552EBFA-B02B-433A-A0F7-FE6BE716D327} = {EF2FB0A3-853E-4E5F-A66E-779586F97771}
+		{BD5B951C-1DA9-421B-A21F-18576B78CD6A} = {F85119C6-195B-4F62-A0B5-8C22DBE6B6BA}
+		{59BCCF1C-8E90-46CF-BCCB-2F87A20D6449} = {BD5B951C-1DA9-421B-A21F-18576B78CD6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {23DFECBB-E4AA-4251-B05B-E3B0699420BA}

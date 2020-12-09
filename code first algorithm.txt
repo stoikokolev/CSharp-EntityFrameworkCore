@@ -1,0 +1,11 @@
+1. Добавяме модели - Student, Town
+2. Primary Key - Id
+3. Добавят се колоните + техни анотации [MaxLength][...]
+4. Добавяме DbContext + DbSet за всеки модел
+5. OnConfiguring (ConnectionString) + OnModelCreating (Модели)
+6. Relationship - ForeignKey TownId + Propery Town Town (за да пишем по-малко заявки)
+	+ Collection в другата страна на relation модела
+	6.5 Many-to-many - Две One-to-many + .HasKey(sc=>new {sc.FirstKeyID, sc.SecondKeyId})
+7. Add-Migration {MigrationName} в Package Manager Console
+8. db.Database.Migrate();
+9. Queries
