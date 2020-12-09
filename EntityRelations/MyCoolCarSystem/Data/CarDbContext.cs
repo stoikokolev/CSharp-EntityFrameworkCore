@@ -1,4 +1,9 @@
-﻿namespace MyCoolCarSystem.Data
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using MyCoolCarSystem.Data.Configurations;
+
+namespace MyCoolCarSystem.Data
 {
     using Microsoft.EntityFrameworkCore;
     using Models;
@@ -28,73 +33,29 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            /*
+
 
             //One-to-One relationship
-            builder
-                .Entity<Customer>(customer =>
-                {
-                    customer
-                        .HasOne(c => c.Address)
-                        .WithOne(a => a.Customer)
-                        .HasForeignKey<Address>(a => a.CustomerId)
-                        .OnDelete(DeleteBehavior.Restrict);
-                });
+            builder.ApplyConfiguration(new CustomerConfiguration());
 
-
-            builder
-                .Entity<Model>()
-                .HasIndex(m => m.Name)
-                .IsUnique();
+            builder.ApplyConfiguration(new ModelConfiguration());
 
             //One-to-Many relationship
-            builder
-                .Entity<Make>(make =>
-                {
-                    make
-                        .HasIndex(m => m.Name)
-                        .IsUnique();
-                    make
-                        .HasMany(m => m.Models)
-                        .WithOne(m => m.Make)
-                        .HasForeignKey(m => m.MakeId)
-                        .OnDelete(DeleteBehavior.Restrict);
+            builder.ApplyConfiguration(new MakeConfiguration());
 
-                });
             //Many-to-One relationship
-            builder
-                .Entity<Car>(car =>
-                {
-                    car.HasIndex(m => m.Vin)
-                        .IsUnique();
-                    car
-
-                        .HasOne(c => c.Model)
-                        .WithMany(m => m.Cars)
-                        .HasForeignKey(c => c.ModelId);
-                });
+            builder.ApplyConfiguration(new CarConfiguration());
 
             //Many-to-Many relationship
-            builder
-                .Entity<CarPurchase>(purchase =>
-                {
-                    purchase.HasKey(p => new
-                    {
-                        p.CustomerId,
-                        p.CarId
-                    });
+            builder.ApplyConfiguration(new CarPurchaseConfiguration());
 
-                    purchase
-                        .HasOne(p => p.Customer)
-                        .WithMany(c => c.Purchases)
-                        .HasForeignKey(p => p.CustomerId)
-                        .OnDelete(DeleteBehavior.Restrict);
+            */
 
-                    purchase
-                        .HasOne(c => c.Car)
-                        .WithMany(c => c.Owners)
-                        .HasForeignKey(p => p.CarId)
-                        .OnDelete(DeleteBehavior.Restrict);
-                });
+            //with reflection we don't need to use commented code above
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+
         }
     }
 }
