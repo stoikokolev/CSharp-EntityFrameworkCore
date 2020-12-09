@@ -33,6 +33,7 @@ namespace MyCoolCarSystem.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            #region ApplyConfigurationsWithoutReflection
             /*
 
 
@@ -51,11 +52,11 @@ namespace MyCoolCarSystem.Data
             builder.ApplyConfiguration(new CarPurchaseConfiguration());
 
             */
+            #endregion
 
             //with reflection we don't need to use commented code above
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
-
+            
         }
     }
 }
