@@ -20,6 +20,8 @@ namespace MyCoolCarSystem.Data.Models
 
         public int Age { get; set; }
 
+        public Address Address { get; set; }
+
         public ICollection<CarPurchase> Purchases { get; set; } = new HashSet<CarPurchase>();
     }
 }

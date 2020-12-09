@@ -15,6 +15,8 @@
 
         public DbSet<CarPurchase> Purchases { get; set; }
 
+        public DbSet<Address> Addresses { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             if (!builder.IsConfigured)
@@ -27,13 +29,24 @@
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
+            //One-to-One relationship
+            builder
+                .Entity<Customer>(customer =>
+                {
+                    customer
+                        .HasOne(c => c.Address)
+                        .WithOne(a => a.Customer)
+                        .HasForeignKey<Address>(a => a.CustomerId)
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
 
             builder
                 .Entity<Model>()
                 .HasIndex(m => m.Name)
                 .IsUnique();
 
-           
+            //One-to-Many relationship
             builder
                 .Entity<Make>(make =>
                 {
@@ -47,7 +60,7 @@
                         .OnDelete(DeleteBehavior.Restrict);
 
                 });
-            
+            //Many-to-One relationship
             builder
                 .Entity<Car>(car =>
                 {
@@ -60,12 +73,14 @@
                         .HasForeignKey(c => c.ModelId);
                 });
 
+            //Many-to-Many relationship
             builder
                 .Entity<CarPurchase>(purchase =>
                 {
                     purchase.HasKey(p => new
                     {
-                        p.CustomerId, p.CarId
+                        p.CustomerId,
+                        p.CarId
                     });
 
                     purchase
