@@ -3,7 +3,7 @@ using SoftUni.Models;
 
 namespace SoftUni.Data
 {
-    public class SoftUniContext : DbContext
+    public partial class SoftUniContext : DbContext
     {
         public SoftUniContext()
         {
@@ -30,8 +30,8 @@ namespace SoftUni.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder
-                    .UseSqlServer(DataSettings.DefaultConnection);
+
+                optionsBuilder.UseSqlServer(DataSettings.DefaultConnection);
             }
         }
 
@@ -182,9 +182,6 @@ namespace SoftUni.Data
             OnModelCreatingPartial(modelBuilder);
         }
 
-        void OnModelCreatingPartial(ModelBuilder modelBuilder)
-        {
-            throw new System.NotImplementedException();
-        }
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
