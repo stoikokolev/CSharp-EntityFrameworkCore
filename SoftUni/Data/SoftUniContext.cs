@@ -3,7 +3,7 @@ using SoftUni.Models;
 
 namespace SoftUni.Data
 {
-    public partial class SoftUniContext : DbContext
+    public class SoftUniContext : DbContext
     {
         public SoftUniContext()
         {
@@ -182,6 +182,9 @@ namespace SoftUni.Data
             OnModelCreatingPartial(modelBuilder);
         }
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        void OnModelCreatingPartial(ModelBuilder modelBuilder)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
