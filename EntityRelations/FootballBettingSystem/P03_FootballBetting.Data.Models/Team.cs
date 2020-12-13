@@ -23,15 +23,15 @@ namespace P03_FootballBetting.Data.Models
         
         public int PrimaryKitColorId { get; set; }
 
-        public Color PrimaryKitColor { get; set; }
+        public virtual Color PrimaryKitColor { get; set; }
 
         public int SecondaryKitColorId { get; set; }
 
-        public Color SecondaryKitColor { get; set; }
+        public virtual Color SecondaryKitColor { get; set; }
 
         public int TownId { get; set; }
 
-        public Town Town { get; set; }
+        public virtual Town Town { get; set; }
 
         public virtual ICollection<Player> Players { get; set; }
 
