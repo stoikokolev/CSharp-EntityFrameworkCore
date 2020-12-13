@@ -1,0 +1,2 @@
+1. Properies ICollections are always VIRTUAL to help lazy loading
+	Always initialize these properties with new HashSet<>

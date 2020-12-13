@@ -1,7 +1,14 @@
-﻿namespace P03_FootballBetting.Data.Models
+﻿using System.Collections.Generic;
+
+namespace P03_FootballBetting.Data.Models
 {
     public class User
     {
+        public User()
+        {
+            this.Bets = new HashSet<Bet>();
+        }
+
         public int UserId { get; set; }
 
         public string UserName { get; set; }
@@ -14,5 +21,7 @@
         public string Name { get; set; }
 
         public decimal Balance { get; set; }
+
+        public virtual ICollection<Bet> Bets { get; set; }
     }
 }

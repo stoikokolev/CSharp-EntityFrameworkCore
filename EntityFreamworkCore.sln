@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Introduction Database First", "Introduction Database First", "{EF2FB0A3-853E-4E5F-A66E-779586F97771}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Table Relations Code First", "Table Relations Code First", "{F85119C6-195B-4F62-A0B5-8C22DBE6B6BA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity Relations Code First", "Entity Relations Code First", "{F85119C6-195B-4F62-A0B5-8C22DBE6B6BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "My Cool Car System", "My Cool Car System", "{BD5B951C-1DA9-421B-A21F-18576B78CD6A}"
 EndProject
