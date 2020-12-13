@@ -1,2 +1,2 @@
-1. Properies ICollections are always VIRTUAL to help lazy loading
-	Always initialize these properties with new HashSet<>
+1. Properies ICollections and navigation properties are always VIRTUAL to help lazy loading
+	Always initialize these collection properties with new HashSet<>
