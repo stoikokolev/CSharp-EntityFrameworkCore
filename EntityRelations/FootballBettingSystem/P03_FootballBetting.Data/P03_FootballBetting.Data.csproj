@@ -16,8 +16,4 @@
     <ProjectReference Include="..\P03_FootballBetting.Data.Models\P03_FootballBetting.Data.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Configuratons\" />
-  </ItemGroup>
-
 </Project>
