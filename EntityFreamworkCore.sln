@@ -13,13 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCoolCarSystem", "EntityRe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Football Betting System", "Football Betting System", "{712D9E18-0FD7-4706-9D82-BB9B40E51397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_FootballBetting", "EntityRelations\FootballBettingSystem\P03_FootballBetting\P03_FootballBetting.csproj", "{55495617-641D-400A-9D35-DFE255B55D86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_FootballBetting", "EntityRelations\FootballBettingSystem\P03_FootballBetting\P03_FootballBetting.csproj", "{55495617-641D-400A-9D35-DFE255B55D86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_FootballBetting.Data", "EntityRelations\FootballBettingSystem\P03_FootballBetting.Data\P03_FootballBetting.Data.csproj", "{8402AFC1-FA78-4171-AFEF-AC1C136D3E83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_FootballBetting.Data", "EntityRelations\FootballBettingSystem\P03_FootballBetting.Data\P03_FootballBetting.Data.csproj", "{8402AFC1-FA78-4171-AFEF-AC1C136D3E83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_FootballBetting.Data.Models", "EntityRelations\FootballBettingSystem\P03_FootballBetting.Data.Models\P03_FootballBetting.Data.Models.csproj", "{134F5CA6-3CA7-4F76-8085-609AEFBF091E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_FootballBetting.Data.Models", "EntityRelations\FootballBettingSystem\P03_FootballBetting.Data.Models\P03_FootballBetting.Data.Models.csproj", "{134F5CA6-3CA7-4F76-8085-609AEFBF091E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUni", "Introduction\SoftUni\SoftUni.csproj", "{9B1782CE-AB5B-43CB-90B8-E804A3CD03C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{AF314974-7063-44E5-AAC6-E00518B2F117}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
